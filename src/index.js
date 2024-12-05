@@ -15,6 +15,10 @@ app.use(cookieparser())
 
 app.use('/api/auth',authRouter)
 app.use('/api/posts',PotsManger,PostsRouter)
+
+app.get('/',(req,res)=>{
+    res.status(201).json({success:true,message:"Welcom To Personal Blog...."})
+})
 app.use(cors())
 
 app.listen(process.env.PORT,()=>{
