@@ -3,9 +3,9 @@ const {AddPost, AllPosts, SinglePosts, EditPosts, DeletePosts} = require('../../
 
 const PostsRouter = Router()
 
-PostsRouter.post("/Add",AddPost)
 PostsRouter.get("/Show",AllPosts)
-PostsRouter.post("/SinglePosts/:id",SinglePosts)
+PostsRouter.get("/SinglePosts/:id",SinglePosts)
+PostsRouter.post("/Add",AddPost)
 PostsRouter.patch("/EditPosts/:id",EditPosts)
 PostsRouter.delete("/DeletePosts/:id",DeletePosts)
 
